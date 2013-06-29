@@ -1,0 +1,12 @@
+My Tracks data processing program
+
+This program is intended to parse and find interesting information about data 
+exported in CSV format from Google's My Tracks app. Maybe also some other things.
+
+Included Files:
+
+parse.lisp
+
+Known Issues:
+
+None at this point

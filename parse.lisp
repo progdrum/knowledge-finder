@@ -9,4 +9,4 @@
 
 ;; Use split-sequence to break on commas
 
-;; Store information in hash tablek, categories are the keys
+;; Store information in hash table, categories are the keys

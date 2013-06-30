@@ -9,7 +9,7 @@
   (:use :common-lisp
 	:split-sequence)
   (:export "parse-and-store")
-  (:documentation "A package containing CSV and other parsing-related functions"))
+  (:documentation "A package containing CSV and other parsing-related functions"
 
 (in-package :parse)
 

@@ -1,3 +1,4 @@
 # File patterns to ignore for My Tracks parser/pattern finder
 
-#.lisp~
+*.lisp~
+\#*\#

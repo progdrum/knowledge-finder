@@ -10,9 +10,15 @@ This program incorporates the split-sequence library.
 
 Included Files:
 
+/:
 parse.lisp
 main.lisp
 README.md (this file)
+objects/
+
+/objects:
+
+mytracks.lisp
 
 Known Issues:
 

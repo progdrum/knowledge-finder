@@ -2,37 +2,23 @@
 ;;;; My Tracks Google app and stores them into a data structure for further 
 ;;;; processing
 
-;;;; Author: progdrum
+;;;; Author: progdrum <https://github.com/progdrum>
 ;;;; Authored: June 29, 2013
 
 (defpackage :parse
   (:use :common-lisp
 	:split-sequence)
   (:export "parse-and-store")
-  (:documentation "A package containing CSV and other parsing-related functions"))
+  (:documentation
+   "A package containing CSV and other parsing-related functions and methods"))
 
 (in-package :parse)
 
-;; Struct in which parsed data is to be stored
-;; Perhaps generalize by making this an object and making PARSE-AND-STORE 
-;; a generic function to dispatch on different objects for processing 
-;; different kinds of data sets?
-(defstruct mytracks-data
-  (segment 0 :type integer)
-  (point 0 :type integer)
-  (latitude 0.0 :type float)
-  (longitude 0.0 :type float)
-  (altitude 0.0 :type float)
-  (bearing 0.0 :type float)
-  (accuracy 0 :type integer)
-  (speed 0.0 :type float)
-  (time "" :type string)
-  (power nil)
-  (cadence nil)
-  (heart-rate nil))
+;; A method for parsing a CSV file and storing it in an associated data object
+(defgeneric parse-and-store (obj file)
+  (:documentation
+   "Parses the CSV input file and stores it in the user-defined object according to that object's specific implementation of this method."))
 
-;; Use split-sequence to break on commas and store (in struct?) 
-;; for further processing
 (defun parse-and-store (file)
   (with-open-file (csv-input file :direction :input)
     ; The following line also needs to store the sequence.

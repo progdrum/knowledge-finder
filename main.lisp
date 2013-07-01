@@ -1,7 +1,7 @@
 ;;;; This is the main file for running all of the My Tracks knowledge 
 ;;;; finder functions and abilities
 
-;;;; Author: progdrum
+;;;; Author: progdrum <https://github.com/progdrum>
 ;;;; Authored: June 30, 2013
 
 (defpackage :mytracks-knowledge-finder

@@ -8,7 +8,8 @@
 ;;; So far, this contains metadata, such as the names of the fields and 
 ;;; created/updated timestamps
 (defclass basic-data-object ()
-  ((time-created :initform (get-universal-time))
+  ((time-created :initform (get-universal-time)
+		 :accessor :time-created)
    (last-updated :initform (get-universal-time)
 		 :accessor :last-updated)
    (field-names :initarg :field-names

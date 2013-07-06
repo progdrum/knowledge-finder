@@ -23,7 +23,9 @@
 				 :accessor ,,(intern field-name)))
 		,fields))))|#
 
-;; A method for parsing a CSV file and storing it in an associated data object
-(defgeneric parse-and-store (obj file)
-  (:documentation
-   "Parses the CSV input file and stores it in the user-defined object according to that object's specific implementation of this method."))
+;; A function for parsing a CSV file and storing it in an associated data object
+(defun parse-and-store (file)
+  "Parse a CSV file and store it in an appropriate data object"
+  (with-open-file (lines file)
+    (loop :for line := (read-line lines nil)
+          :while line :collect (split-sequence:split-sequence #\, line))))

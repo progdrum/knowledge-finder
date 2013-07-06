@@ -14,6 +14,7 @@ Included Files:
 
 parse.lisp
 main.lisp
+libraries.lisp
 README.md (this file)
 objects/
 
@@ -24,4 +25,4 @@ basic-data-object.lisp
 
 Known Issues:
 
-None at this point
+DEFOBJECT-FROM-DATA needs to be debugged
